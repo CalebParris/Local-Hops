@@ -2,6 +2,20 @@ $(document).ready(function() {
     var signUpForm = $("form.signup");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
+    var ageInput = $("input#age-input");
+    var ageVerifyForm = $("form.ageVerify");
+
+    ageVerifyForm.on("submit", function(event){
+        event.preventDefault();
+        if (ageInput.val() >= 21){
+            $("#signUp").removeClass("hide");
+            $("#age").addClass("hide");
+        } else {
+            alert("You must be 21 or older to create an account");
+            window.location.replace("/");
+        }
+    });
+
   
     signUpForm.on("submit", function(event) {
       event.preventDefault();
