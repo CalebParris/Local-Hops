@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
-    var breweries = sequelize.define("breweries", {
+    var Favorite = sequelize.define("Favorite", {
      
     lat: {
-        type: DataTypes.DECIMAL
+        type: DataTypes.STRING
     },
     long: {
-        type: DataTypes.DECIMAL
+        type: DataTypes.STRING
     },
     name: {
         type: DataTypes.STRING
@@ -24,12 +24,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     brewerytype: {
         type: DataTypes.STRING
-    },
-    score: {
-        type: DataTypes.STRING
     }
-
     });
-    return breweries;
+    return Favorite;
   };
   
