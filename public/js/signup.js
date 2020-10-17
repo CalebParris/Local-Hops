@@ -4,6 +4,7 @@ $(document).ready(function() {
     var passwordInput = $("input#password-input");
     var ageInput = $("input[name = 'choice']");
     var ageVerifyForm = $("form.ageVerify");
+    var nameInput = $("input#name-input");
 
     ageVerifyForm.on("submit", function(event){
         event.preventDefault();
@@ -23,21 +24,24 @@ $(document).ready(function() {
     signUpForm.on("submit", function(event) {
       event.preventDefault();
       var userData = {
+        name: nameInput.val().trim(),
         email: emailInput.val().trim(),
         password: passwordInput.val().trim()
       };
   
-      if (!userData.email || !userData.password) {
+      if (!userData.name || !userData.email || !userData.password) {
         return;
       }
       
-      signUpUser(userData.email, userData.password);
+      signUpUser(userData.name, userData.email, userData.password);
+      nameInput.val("");
       emailInput.val("");
       passwordInput.val("");
     });
   
-    function signUpUser(email, password) {
+    function signUpUser(name, email, password) {
       $.post("/api/signup", {
+        name: name,
         email: email,
         password: password
       })
