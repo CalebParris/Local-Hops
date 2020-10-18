@@ -1,3 +1,4 @@
 node_modules
 packet-lock.json
 package-lock.json
+.env
