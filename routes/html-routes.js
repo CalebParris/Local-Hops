@@ -5,28 +5,28 @@ const path = require("path");
 
 module.exports = function(app) {
 
-    app.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/home.html"));
-      });
+  app.get("/", function(req, res) {
+    res.render("home");
+  });
 
-      app.get("/login", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/login.html"));
-      });
+  app.get("/login", function(req, res) {
+    res.render("login");
+  });
 
-      app.get("/signup", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/signup.html"));
-      });
+  app.get("/signup", function(req, res) {
+    res.render("signup");
+  });
 
-      app.get("/breweries", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/breweries.html"));
-      });
-    
-      app.get("/profile", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/profile.html"));
-      });
+  app.get("/brewery", function(req, res) {
+    res.render("brewery");
+  });
 
-      app.get("/logout", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/logout.html"));
-      });
+  app.get("/results", function(req, res) {
+    res.render("results");
+  });
+
+  app.get("/profile", function(req, res) {
+    res.render("profile");
+  });
     
 }
