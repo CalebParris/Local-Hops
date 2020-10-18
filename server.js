@@ -21,6 +21,11 @@ app.use(session({ secret: "project2", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+//handlebars setup
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 
 //parse application json
 app.use(bodyParser.json());
