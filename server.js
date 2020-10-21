@@ -21,9 +21,20 @@ app.use(session({ secret: "project2", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-//handlebars setup
+//handlers setup
 var exphbs = require("express-handlebars");
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
+
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    runtimeOptions: {
+      allowProtoPropertiesByDefault: true,
+      allowProtoMethodsByDefault: true,
+    },
+  })
+);
 app.set("view engine", "handlebars");
 
 
@@ -38,8 +49,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
+
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
   });

@@ -1,40 +1,38 @@
- <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a> 
-                </li>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/profile">Profile</a> 
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/logout">Logout</a> 
-                </li>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
 
-            </ul>
-        </div>
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+
+      </ul>
     </div>
-    </nav>
+  </div>
+</nav>
 
-       <div class="container beerForm">
+<div class="container">
 
-      <form>
-          <div class="form-group formGroups">
-            <label class="labelStyle" for="city-name">What is the name of your City (Texas)?</label>
-            <input type="text" class="form-control" id="city-name-input" placeholder="City Name">
-          </div>
-          <div class="form-group formGroups">
-            <label class="labelStyle" for="brewery-name">Search for a Brewery or Pub?</label>
-            <input type="text" class="form-control" id="brewery-name-input" placeholder="Brewery Name">
-          </div>
-          <div class="form-group formGroups">
-            <button type="submit" class="btn btn-primary" id="brew-form-submit">Submit</button>
-        </div>
-      </form>
-    </div>
+  <div class="form-group formGroups beerForm">
+    <label class="labelStyle" for="city-name">What is the name of your City (Texas)?</label>
+    <input type="text" class="form-control" id="city-name-input" placeholder="City Name">
+  </div>
+ 
+  <div class="form-group">
+    <button class="btn btn-primary" id="brew-form-submit">Submit</button>
+  </div>
+<ul class="list-unstyled row  " id="brew">
+
+</ul>
+</div>

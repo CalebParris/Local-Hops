@@ -25,7 +25,20 @@ module.exports = function(sequelize, DataTypes) {
     brewerytype: {
         type: DataTypes.STRING
     }
+        },{
+        timestamps: false
+
     });
+    Brewery.associate = function(models) {
+        Brewery.belongsToMany(models.User, {
+          through: 'UserBrewery',
+          as: 'users',
+          foreignKey: 'BreweryId'
+        });
+      };
+
     return Brewery;
 };
+
+
   

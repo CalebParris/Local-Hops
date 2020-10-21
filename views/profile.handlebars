@@ -11,7 +11,7 @@
                     <a class="nav-link" href="/">Home</a> 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/breweries">Breweries</a> 
+                  <a class="nav-link" href="/brewery">Breweries</a> 
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Logout</a> 
@@ -22,3 +22,13 @@
     </nav>
 
       <h1>Local Hops Profile Page!!</h1>
+
+<h2>Favorites!</h2>
+
+{{#each breweries}}
+<br>
+<h3>{{name}}</h3>
+<h3>{{city}}</h3>
+<h3>{{address}}</h3>
+<h3>{{phonenumber}}</h3>
+{{/each}}
