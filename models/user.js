@@ -19,6 +19,13 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  User.associate = function(models) {
+    User.belongsToMany(models.Brewery, {
+      through: 'UserBrewery',
+      as: 'breweries',
+      foreignKey: 'UserId'
+    });
+  };
 
   User.prototype.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password);
