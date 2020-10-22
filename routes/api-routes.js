@@ -6,27 +6,25 @@ const Op = Sequelize.Op;
 module.exports = function(app) {
 
   app.get("/api/brewery", function (req, res) {
-
-    db.Brewery.findAll({})
-    .then(function (dbBrewery) {
-
-      res.json(dbBrewery);
-
-    });
-  });
-
-
-  app.get("/api/brewery/latlng", function (req, res) {
-
     db.Brewery.findAll({
-
-      attributes: ['lat','long']
     }).then(function (dbBrewery) {
-
       res.json(dbBrewery);
 
     });
   });
+
+
+  // app.get("/api/brewery/latlng", function (req, res) {
+
+  //   db.Brewery.findAll({
+
+  //     attributes: ['lat','long']
+  //   }).then(function (dbBrewery) {
+
+  //     res.json(dbBrewery);
+
+  //   });
+  // });
 
 
         //Search breweries
