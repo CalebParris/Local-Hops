@@ -66,7 +66,7 @@ addMarker({lat:30.2625, lng:-97.7154});
                position:coords,
                 map:map,
               icon:{
-                  url:"beericon.png",
+                  url:"./images/beericon.png",
                   scaledSize: new google.maps.Size(58, 58)
               }
             
