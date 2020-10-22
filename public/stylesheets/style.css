@@ -100,3 +100,8 @@ label input[type="checkbox"] {
 .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
   opacity: 1;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
