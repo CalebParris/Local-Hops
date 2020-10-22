@@ -2,10 +2,10 @@ module.exports = function(sequelize, DataTypes) {
     var Brewery = sequelize.define("Brewery", {
      
     lat: {
-        type: DataTypes.STRING
+        type: DataTypes.DECIMAL(10, 7)
     },
     long: {
-        type: DataTypes.STRING
+        type: DataTypes.DECIMAL(10, 7)
     },
     name: {
         type: DataTypes.STRING
