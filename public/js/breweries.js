@@ -10,18 +10,18 @@ $(document).ready(function(){
         method: "GET"
     
 	    }).then(function(data) {
-        $("#brew").empty();
+        $("#brews").empty();
           console.log(data)
         for ( let i = 0; i < data.length; i++) {
             var li = $(` 
 
-            <li class="list-item col-md-4 col-6"><p>Brewery: ${data[i].name}<br>City: ${data[i].city}<br>Address: ${data[i].address}<br>Phone Number: ${data[i].phonenumber}
-            <button type="submit" class="favorite" data-id=${data[i].id}>Add to Favorites</button>
+            <li class="list-item brewery-list"><p>Brewery: ${data[i].name}<br>City: ${data[i].city}<br>Address: ${data[i].address}<br>Phone Number: ${data[i].phonenumber}
+            <button type="submit" class="btn favorite" data-id=${data[i].id}>Add to Favorites</button>
             </p></li>
  
             `)     
               
-             $("#brew").append(li)
+             $("#brews").append(li)
         }
 
         $(".favorite").on("click", function(event) {

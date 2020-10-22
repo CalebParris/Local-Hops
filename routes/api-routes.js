@@ -97,7 +97,7 @@ module.exports = function(app) {
           res.json({});
         } else {
           res.json({
-            email: req.user.email,
+            name: req.user.name,
             id: req.user.id
           });
         }
