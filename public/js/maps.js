@@ -32,8 +32,8 @@ function initMap() {
         return window;
 
     }).then(function () {
-        // let marker
-         window.map((location) => {
+        let markers = [];
+        window.map((location) => {
             let position = {lat: location.lat, lng: location.lng}
             let contentString = 
             (` 
@@ -48,7 +48,7 @@ function initMap() {
             </div>
             `);
         
-           const  marker = new google.maps.Marker({
+           const marker = new google.maps.Marker({
                 position: position, 
                 map: map,
                 icon: {
@@ -66,10 +66,12 @@ function initMap() {
             marker.addListener("click", () => {
                 infowindow.open(map, marker);
             });
+
+            markers.push(marker);
     
         });
         const path = "./images";
-        new MarkerClusterer(map, marker, { imagePath: `${path}/m` });
+        new MarkerClusterer(map, markers, { imagePath: `${path}/m` });
 
         // let brewWindow = brewInfo[1];
         // let contentString
