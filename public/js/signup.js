@@ -1,9 +1,9 @@
 $(document).ready(function() {
-  var signUpForm = $("form.signup");
+  var signUpForm = $("form.form-signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
   var ageInput = $("input[name = 'choice']");
-  var ageVerifyForm = $("form.ageVerify");
+  var ageVerifyForm = $("form.form-ageVerify");
   var nameInput = $("input#name-input");
 
   ageVerifyForm.on("submit", function(event){
@@ -12,8 +12,8 @@ $(document).ready(function() {
       if (ageInput[0].checked === false && ageInput[1].checked === false){
           alert("Please select one of the options below");
       } else if (ageInput[0].checked){
-          $("#signUp").removeClass("hide");
-          $("#age").addClass("hide");
+        signUpForm.removeClass("hide");
+        ageVerifyForm.addClass("hide");
       } else if (ageInput[1].checked){
           alert("You must be 21 or older to create an account");
           window.location.replace("/");
