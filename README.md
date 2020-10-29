@@ -35,7 +35,7 @@
 
    ## License
    The license associated with this project is MIT.
-   To view the license information, visit the link [here](https://github.com/CalebParris/Local-Hops/blob/master/LICENSE)
+   To view the license information, visit the link [here](https://github.com/CalebParris/Local-Hops/blob/main/LICENSE)
 
    ## Contributions
    This app was made with several contribututions from the following people:
