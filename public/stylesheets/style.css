@@ -238,6 +238,12 @@ form.form-login, form.form-ageVerify, .beer-form{
   color: black;
 }
 
+@media screen and (max-width: 768px){
+  #favs{
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
 @media screen and (max-width: 643px){
   .form-signup{
     margin-top: -50px;
@@ -252,6 +258,12 @@ form.form-login, form.form-ageVerify, .beer-form{
 @media screen and (max-width: 540px){
   #brews{
     grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 425px){
+  #favs{
+    grid-template-columns: repeat(2, auto);
   }
 }
 
