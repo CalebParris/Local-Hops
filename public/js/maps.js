@@ -32,21 +32,8 @@ function initMap() {
         return window;
 
     }).then(function () {
-        let markers = [];
         window.map((location) => {
             let position = {lat: location.lat, lng: location.lng}
-            let contentString = 
-            (` 
-            <div class="siteNotice"></div>
-            <h1 class="firstHeading">${location.name}</h1>
-            <div class="bodyContent">
-            <p><b>Address: </b>${location.address}<BR>
-            <b>City: </b>${location.city}<BR>
-            <b>Phone: </b>${location.phonenumber}</p>
-            <b>Brewery Type: </b>${location.brewerytype}</p>
-            </div>
-            </div>
-            `);
         
            const marker = new google.maps.Marker({
                 position: position, 
@@ -57,17 +44,6 @@ function initMap() {
                 },
 
             });
-
-            const infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
-
-
-            marker.addListener("click", () => {
-                infowindow.open(map, marker);
-            });
-
-            markers.push(marker);
     
         });
         const path = "./images";
