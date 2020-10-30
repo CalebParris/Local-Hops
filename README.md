@@ -56,18 +56,18 @@
 
    Once there, you will be brought to a home page asking you to either login or signup. If you do not have an account (which you won't if this is the first time running the app), click the signup button and fill out the fields.
 
-   ![Home Page]()
-   ![Signup Page]()
+   ![Home Page](./public/images/local_hops_home.png)
+   ![Signup Page](./public/images/local_hops_signup.png)
 
    After you are signed in, you will be taken to a profile page that lists all of your selected favorite breweries (this will be mostly blank until you actually favorite some breweries). On this page you can either logout, or go to the brewery search page.
 
-   ![Pre-Favorite Profile Page]()
+   ![Pre-Favorite Profile Page](./public/images/local_hops_pre-fav.png)
 
    On the brewery search page, you will see a search bar that will let you enter a city in Texas and get a list of all the breweries in that area. Underneath the search bar is a map that is already populated with all the brewery locations in Texas to make choosing a city easier. Once the city has been entered, the previously mentioned list of breweries will appear beneath the map. When you click on the "Add to Favorites" button, that brewery's information will then be sent to your profile page.
 
-   ![Search Page w/o List]()
-   ![Search Page w/ List]()
-   ![Post-Favorite Profile Page]()
+   ![Search Page w/o List](./public/images/local_hops_search_map.png)
+   ![Search Page w/ List](./public/images/local_hops_search_results.png)
+   ![Post-Favorite Profile Page](./public/images/local_hops_post-fav.png)
 
    To see the deployed finished product, you can visit the link below:
    
