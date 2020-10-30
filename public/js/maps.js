@@ -8,7 +8,6 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), options);
 
-    // const locations = [];
     const window = [];
     $.ajax({
         url: "/api/brewery",
@@ -18,8 +17,6 @@ function initMap() {
         for (let i = 0; i < data.length; i++) {
             let lat = parseFloat(data[i].lat);
             let long = parseFloat(data[i].long);
-            // let locObj = { lat: lat, lng: long };
-            // locations.push(locObj);
 
             let name = data[i].name;
             let address = data[i].address;
@@ -50,40 +47,6 @@ function initMap() {
     
         });
         const path = "./images";
-        new MarkerClusterer(map, markers, { imagePath: `${path}/m` });
-
-        // let brewWindow = brewInfo[1];
-        // let contentString
-    //     for (let i = 0; i < brewWindow.length; i++) {
-    //     contentString =
-
-    //     }
-
-        
-
+        new MarkerClusterer(map, markers, { imagePath: `${path}/m` });      
     });
-
-
-    // $.ajax({
-    //     url:"/api/brewery",  
-    //     method: "GET"
-    // }).then(function(data){
-    //     console.log(data)
-    // for(let i = 0; i < data.length; i++){
-    //     let contentString = 
-    //     (` 
-    //     <div class="siteNotice"></div>
-    //     <h1 class="firstHeading">${data[i].name}</h1>
-    //     <div class="bodyContent">
-    //     <p><b>Address: </b>${data[i].address}<BR>
-    //     <b>City: </b>${data[i].city}<BR>
-    //     <b>Phone: </b>${data[i].phonenumber}</p>
-    //     <b>Brewery Type: </b>${data[i].brewerytype}</p>
-    //     </div>
-    //     </div>
-    //     `);
-
-    // };
-    // });
-
 }

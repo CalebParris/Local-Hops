@@ -39,12 +39,9 @@ module.exports = function(app) {
             include: 'breweries'
           
         }).then(function (dbBrewery) {
-                  //  console.log(dbBrewery.breweries.map(breweryObj => breweryObj.Brewery))
-                 console.log(dbBrewery.breweries)
-                res.render("profile", dbBrewery);
+            console.log(dbBrewery.breweries)
+            res.render("profile", dbBrewery);
           });
 
-        });
-
-    
+        }); 
 }
