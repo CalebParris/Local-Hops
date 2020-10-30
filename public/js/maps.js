@@ -32,6 +32,7 @@ function initMap() {
         return window;
 
     }).then(function () {
+        let markers = [];
         window.map((location) => {
             let position = {lat: location.lat, lng: location.lng}
         
@@ -44,6 +45,8 @@ function initMap() {
                 },
 
             });
+
+            markers.push(marker);
     
         });
         const path = "./images";
