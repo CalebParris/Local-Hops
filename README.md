@@ -33,6 +33,8 @@
 
    This will create the tables needed for the app. Now that the tables are created, import the beermap.texas.csv file into the breweries table by right-clicking the table and selecting "Table Data Import Wizard". Follow the steps of the wizard until you see a list of the colums with checkboxes next to them. The longitude is the first column and the lat is the second column, so change these in the drop down. The columns after that just need to be changed in the drop down to match the value. The last column after the brewery type needs to be unchecked as it contains data that is not used by this app.
 
+   ***+++Note you may need to restart the server after this is completed to insure the table data is saved+++***
+
    ## License
    The license associated with this project is MIT.
    To view the license information, visit the link [here](https://github.com/CalebParris/Local-Hops/blob/master/LICENSE)
@@ -46,13 +48,30 @@
    [![Contributor Image](https://github.com/sahibamj.png?size=75)](https://github.com/sahibamj)
 
    ## Tests
-   To test the app, follow the directions from the Installation and Usage sections first. After that, you can use the app as follows:
+   To test the app, follow the directions from the Installation and Usage sections first. Then go to the following url in your browser:
 
-   ![]()
+   ```
+   https://localhost:3000
+   ```
 
-   To see the deployed finished product, you can visit this link:
+   Once there, you will be brought to a home page asking you to either login or signup. If you do not have an account (which you won't if this is the first time running the app), click the signup button and fill out the fields.
+
+   ![Home Page]()
+   ![Signup Page]()
+
+   After you are signed in, you will be taken to a profile page that lists all of your selected favorite breweries (this will be mostly blank until you actually favorite some breweries). On this page you can either logout, or go to the brewery search page.
+
+   ![Pre-Favorite Profile Page]()
+
+   On the brewery search page, you will see a search bar that will let you enter a city in Texas and get a list of all the breweries in that area. Underneath the search bar is a map that is already populated with all the brewery locations in Texas to make choosing a city easier. Once the city has been entered, the previously mentioned list of breweries will appear beneath the map. When you click on the "Add to Favorites" button, that brewery's information will then be sent to your profile page.
+
+   ![Search Page w/o List]()
+   ![Search Page w/ List]()
+   ![Post-Favorite Profile Page]()
+
+   To see the deployed finished product, you can visit the link below:
    
-   []()
+   [https://local-texas-hops.herokuapp.com/](https://local-texas-hops.herokuapp.com/)
 
    ## Questions
    If you have any comments, questions, or concerns about this project, please post them [here](https://github.com/CalebParris/Local-Hops/issues) and I will respond as soon as I am able.
